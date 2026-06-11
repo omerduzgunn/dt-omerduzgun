@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömer Düzgün | Diş Teknisyeni & Dental Laboratuvar</title>
+    <style>
+        /* Genel Kurumsal Renkler (Gece Mavisi ve Beyaz) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b192c;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(11, 25, 44, 0.95);
+            padding: 20px 10%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Giriş (Hero) Alanı */
+        .hero {
+            padding: 150px 10% 80px 10%;
+            text-align: center;
+            background: radial-gradient(circle, #152b48 0%, #0b192c 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #0b192c;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Hizmetler Bölümü */
+        .section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #ffffff;
+            margin: 10px auto 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #152b48;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* Fotoğraf Galerisi (Yapılan İşler) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            background-color: #152b48;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-desc {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(11, 25, 44, 0.9));
+            padding: 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* İletişim Bölümü */
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #152b48;
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-method {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .contact-method a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Ömer Düzgün</div>
+        <nav>
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#isler">Yaptığım İşler</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ömer Düzgün</h1>
+        <p>Diş Teknisyeni |Laboratuvar Çözümleri</p>
+        <a href="#iletisim" class="btn">İletişime Geç</a>
+    </section>
+
+    <section id="hizmetler" class="section">
+        <h2 class="section-title">Hizmetlerim</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Zirkonyum Altyapılı Protezler</h3>
+                <p>Yüksek dayanıklılık ve estetik uyuma sahip zirkonyum kron ve köprü sistemleri.</p>
+            </div>
+            <div class="service-card">
+                <h3>Laminate Veneer (Yaprak Porselen)</h3>
+                <p>Minimum preparasyon ile maksimum estetik sağlayan hassas porselen uygulamaları.</p>
+            </div>
+<div class="service-card">
+            <h3>Metal İskelet yapımı</h3>
+            <p>Özel işcilikle üretilen yüksek dayanıklı metal iskeletler.</p>
+        </div>
+            <div class="service-card">
+                <h3>İmplant Üstü Protezler</h3>
+                <p>Vida ve simante sistemli, fonksiyonel ve anatomiye tam uyumlu implant çözümleri.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="isler" class="section" style="background-color: #102238;">
+        <h2 class="section-title">Yaptığım İşler</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="is1.jpg" alt="Zirkonyum Kron Çalışması">
+                <div class="gallery-desc">Zirkonyum Kron Restorasyonu</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ornek2.jpg" alt="Laminate Veneer Çalışması">
+                <div class="gallery-desc">Estetik Laminate Veneer</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ornek3.jpg" alt="İmplant Üstü Çalışma">
+                <div class="gallery-desc">Hassas Tutuculu İmplant Üstü Protez</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="section">
+        <h2 class="section-title">İletişim</h2>
+        <div class="contact-info">
+            <div class="contact-method">
+                <p>Telefon:</p>
+                <a href="tel:05541487958">0554 148 79 58</a>
+            </div>
+            <div class="contact-method">
+                <p>E-Posta:</p>
+                <a href="mailto:omerduzgun028@gmail.com">omerduzgun028@gmail.com</a>
+            </div>
+            <p style="font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 20px;">
+                Klinik ve hekim iş ortaklıkları için kargo veya kurye ile ölçü kabulü yapılmaktadır.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ömer Düzgün - Pusula Dental. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
